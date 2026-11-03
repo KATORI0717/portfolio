@@ -145,33 +145,6 @@
                 </div>
             </div>
         </li>
-        <li class="flow-detail__item" id="step-3">
-            <p class="flow-detail__num" aria-hidden="true">
-                <span class="flow-detail__num-label">STEP</span>
-                <span class="flow-detail__num-value">03</span>
-            </p>
-            <div class="flow-detail__card">
-                <div class="flow-detail__head">
-                    <img class="flow-detail__icon" src="<?php echo esc_url(get_theme_file_uri( 'assets/img/flow/step-03.svg' ) ); ?>" alt="" width="40" height="40">
-                    <h2 class="flow-detail__title">構成・デザイン<span class="flow-detail__title-en">Wireframe &amp; Design</span></h2>
-                </div>
-                <p class="flow-detail__text">まずはページの組み立て（ワイヤーフレーム）を作り、載せる内容に抜けがないかを一緒に確かめます。そのあと、色・写真・文字の大きさを決めて、デザインに仕上げます。</p>
-                <div class="flow-detail__box">
-                    <p class="flow-detail__box-title">一緒に確かめること</p>
-                    <ul class="flow-detail__list">
-                        <li class="flow-detail__list-item">伝える順番が自然か</li>
-                        <li class="flow-detail__list-item">必要な情報が入っているか</li>
-                        <li class="flow-detail__list-item">色や写真の雰囲気など</li>
-                    </ul>
-                </div>
-                <div class="flow-detail__qa">
-                    <details class="flow-detail__qa-item">
-                        <summary class="flow-detail__question">デザインを見てから、直してもらえますか？</summary>
-                        <p class="flow-detail__answer">はい。気になるところをお聞きして調整します。直す回数は、お見積りの時にご相談します。</p>
-                    </details>
-                </div>
-            </div>
-        </li>
         <li class="flow-detail__item" id="step-4">
             <p class="flow-detail__num" aria-hidden="true">
                 <span class="flow-detail__num-label">STEP</span>
@@ -180,7 +153,7 @@
             <div class="flow-detail__card">
                 <div class="flow-detail__head">
                     <img class="flow-detail__icon" src="<?php echo esc_url(get_theme_file_uri( 'assets/img/flow/step-04.svg' ) ); ?>" alt="" width="40" height="40">
-                    <h2 class="flow-detail__title">見出し：コーディング<span class="flow-detail__title-en">Coding</span></h2>
+                    <h2 class="flow-detail__title">コーディング<span class="flow-detail__title-en">Coding</span></h2>
                 </div>
                 <p class="flow-detail__text">デザインをもとに、実際に見られるページを作ります。パソコンでもスマートフォンでも見やすいように整えます。公開後にお客様ご自身で更新しやすい形にします。</p>
             </div>
