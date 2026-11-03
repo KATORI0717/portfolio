@@ -125,7 +125,7 @@
 		</div>
 	</div>
 
-	<p class="service__note">料金は、ご相談内容に合わせてお見積もりいたします。まずは<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">お問い合わせ</a>からお気軽にどうぞ。</p>
+	<p class="service__note">料金は、ご相談内容に合わせてお見積もりいたします。<br>まずは<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">お問い合わせ</a>からお気軽にどうぞ。</p>
 	<h3 class="service__flow-title">制作の流れ</h3>
 	<ol class="service__flow">
 		<li class="service__flow-item">ヒアリング</li>
