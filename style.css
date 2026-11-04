@@ -1033,6 +1033,117 @@ margin: 0;
   letter-spacing: 0.1em;
   cursor: pointer;
 }
+/* 制作の流れ */
+.flow-page {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 140px var(--side) 120px;
+}
+.flow-page__bg-text {
+  position: absolute;
+  top: 24px;
+  right: -0.06em;
+  z-index: -1;
+  margin: 0;
+  font-family: var(--font-en);
+  font-size: 200px;
+  line-height: 1;
+  color: #e6ded3;
+  pointer-events: none;
+}
+.flow-page__head {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: var(--content);
+  margin: 0 auto 56px;
+}
+.flow-page__label {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: var(--color-muted);
+}
+.flow-page__title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+}
+.flow-page__lead {
+  max-width: 40em;
+  margin: 0;
+  font-size: 15px;
+  line-height: 2;
+  color: var(--color-muted);
+}
+.flow-index {
+  display: grid;
+  grid-template-columns: repeat(6,minmax(0,1fr));
+  gap: 24px;
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: 28px 0 40px;
+}
+.flow-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  padding: 34px 12px 22px;
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+  background: var(--color-bg-light);
+  text-align: center;
+}
+.flow-card::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: calc(50% - 22px);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  box-shadow: 35px 0 0 var(--color-bg);
+}
+.flow-card__tab {
+  position: absolute;
+  bottom: 100%;
+  right: 12px;
+  height: 8px;
+  padding: 0 10px;
+  overflow: hidden;
+  border-radius: 4px 4px 0 0;
+  background: var(--color-line);
+  color: #FFF;
+  font-family: var(--font-en);
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+}
+.flow-card__step {
+  font-family: var(--font-en);
+  font-size: 14px;
+  font-variant-numeric: lining-nums;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+}
+.flow-card__icon {
+  width: 44px;
+  height: 44px;
+}
+.flow-card__name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+}
+
 
 
 /* 動き */
@@ -1085,6 +1196,41 @@ a:focus-visible,button:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 4px;
 }
+.flow-card {
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.flow-card__tab {
+  transition: height 0.35s, background-color 0.35s;
+}
+.flow-card::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 12px);
+  left: calc(50% - 6px);
+  width: 12px;
+  height: 12px;
+  border-right: 1.5px solid var(--color-accent);
+  border-bottom: 1.5px solid var(--color-accent);
+  opacity: 0;
+  transform: translateY(-8px) rotate(45deg);
+  transition: opacity 0.35s, transform 0.35s;
+}
+.flow-card:hover,
+.flow-card:focus-visible {
+  transform: translateY(-8px) rotate(-1.2deg);
+  box-shadow: 0 14px 24px -12px rgba(58,54,51,0.14);
+}
+.flow-card:hover .flow-card__tab, 
+.flow-card:focus-visible .flow-card__tab {
+  height: 22px;
+  background: var(--color-accent);
+}
+.flow-card:hover::after,
+.flow-card:focus-visible::after {
+  opacity: 1;
+  transform: translateY(0) rotate(45deg);
+}
+
 /* タブレット・小さめのPC */
 @media (max-width: 1100px) {
   :root {
@@ -1375,3 +1521,20 @@ a:focus-visible,button:focus-visible {
     align-self: stretch;
   }
 } 
+@media (hover: none) {
+  .flow-card::after {
+    opacity: 1;
+    transform: rotate(45deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .flow-card,
+  .flow-card__tab,
+  .flow-card::after {
+    transition: none;
+  }
+  .flow-card:hover,
+  .flow-card:focus-visible {
+    transform: none;
+  }
+}
