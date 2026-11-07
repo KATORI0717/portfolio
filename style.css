@@ -250,6 +250,9 @@ margin: 0;
 .about__images {
   position: relative;
   align-self: center;
+  width: 100%;
+  max-width: 540px;
+  margin-left: auto;
 }
 .about__img {
   object-fit: cover;
@@ -266,7 +269,8 @@ margin: 0;
   position: absolute;
   left: 0;
   bottom: -64px;
-  width: 190px;
+  width: 40%;
+  max-width: 190px;
   aspect-ratio: 250 / 300;
   border: 3px solid var(--color-bg-light);
   transform: rotate(-7deg);
@@ -1430,10 +1434,6 @@ a:focus-visible,button:focus-visible {
   .about {
     gap: 48px;
   }
-  .about__img--sub {
-    width: 140px;
-  }
-  
   .service__list {
     gap: 20px;
   }
@@ -1557,7 +1557,9 @@ a:focus-visible,button:focus-visible {
   }
   .about__img--sub {
     bottom: -40px;
-    width: 130px;
+    max-width: 130px;
+    width: auto;
+    left: 0;
   }
   .works {
     padding: 120px var(--side)80px;
@@ -1700,6 +1702,12 @@ a:focus-visible,button:focus-visible {
     align-self: stretch;
   }
 } 
+@media (max-width: 340px) {
+  .about__img--sub {
+    max-width: 100px;
+    left: -5%;
+  }
+}
 @media (hover: none) {
   .flow-card::after {
     opacity: 1;
