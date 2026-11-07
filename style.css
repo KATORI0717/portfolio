@@ -1143,7 +1143,186 @@ margin: 0;
   line-height: 1.6;
   letter-spacing: 0.06em;
 }
+/* くわしい説明：丸い数字・つなぐ線・白いカード */
+.flow-detail {
+  display: grid;
+  gap: 36px;
+  max-width: var(--content);
+  margin: 72px auto 0;
+}
+.flow-detail__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 72px minmax(0,1fr);
+  gap: 28px;
+  scroll-margin-top: 40px;
+}
+.flow-detail__item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 72px;
+  bottom: -36px;
+  left: 35px;
+  width: 1px;
+  background: var(--color-line);
+}
+.flow-detail__num {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  margin: 0;
+  border: 1px solid var(--color-text);
+  border-radius: 50%;
+  font-family: var(--font-en);
+  font-variant-numeric: lining-nums;
+  line-height: 1;
+}
+.flow-detail__num-label {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+.flow-detail__num-value {
+  font-size: 24px;
+}
+.flow-detail__item:last-child .flow-detail__num {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: #FFF;
+}
+.flow-detail__card {
+  padding: 32px 36px;
+  border-radius: 6px;
+  background: var(--color-bg-light);
+}
+.flow-detail__head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.flow-detail__icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+}
+.flow-detail__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+.flow-detail__title-en {
+  font-family: var(--font-en);
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-muted);
+}
+.flow-detail__text {
+  max-width: 40em;
+  margin: 14px 0 0;
+}
+.flow-detail__box {
+  max-width: 40em;
+  margin-top: 22px;
+  padding: 18px 20px;
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+}
+.flow-detail__box-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+.flow-detail__list {
+  display: grid;
+  gap: 4px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+.flow-detail__list-item {
+  position: relative;
+  padding-left: 18px;
+}
+.flow-detail__list-item::before {
+  content: "";
+  position: absolute;
+  top: 0.75em;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-line);
+}
+.flow-detail__qa {
+  max-width: 40em;
+  margin-top: 18px;
+  border-top: 1px solid var(--color-line);
+}
+.flow-detail__qa-item {
+  border-bottom: 1px solid var(--color-line);
+}
+.flow-detail__question {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 14px 28px 14px 0;
+  font-size: 14px;
+  font-weight: 500;
+  list-style: none;
+  cursor: pointer;
+}
+.flow-detail__question::-webkit-details-marker {
+  display: none;
+}
+.flow-detail__question::before {
+  content: "Q.";
+  font-family: var(--font-en);
+  font-size: 17px;
+  color: var(--color-accent);
+}
+.flow-detail__question::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  margin-top: -6px;
 
+  border-right: 1px solid var(--color-muted);
+  border-bottom: 1px solid var(--color-muted);
+  transform: rotate(45deg);
+  transition: transform 0.3s;
+}
+.flow-detail__qa-item[open] .flow-detail__question::after {
+  margin-top: -2px;
+  transform: rotate(-135deg);
+}
+.flow-detail__answer {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0 0 16px;
+  font-size: 14px;
+  color: var(--color-muted);
+}
+.flow-detail__answer::before {
+  content: "A.";
+  font-family: var(--font-en);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-text);
+}
 
 
 /* 動き */
@@ -1530,7 +1709,8 @@ a:focus-visible,button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .flow-card,
   .flow-card__tab,
-  .flow-card::after {
+  .flow-card::after,
+  .flow-detail__question::after {
     transition: none;
   }
   .flow-card:hover,
