@@ -577,6 +577,17 @@ margin: 0;
   background: var(--color-accent);
   color: #FFF;
 }
+.service__flow-more {
+  margin: 48px 0 0;
+  text-align: center;
+}
+.service__flow-link {
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--color-text);
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
 .contact {
   position: relative;
   isolation: isolate;
@@ -1334,6 +1345,7 @@ margin: 0;
 .header__nav-link,
 .header__contact,
 .hero__link,
+.service__flow-link,
 .works__button,
 .service__note a,
 .contact__button,
@@ -1367,7 +1379,8 @@ margin: 0;
 .contact-form__submit:hover {
   opacity: 0.8;
 }
-.hero__link:hover {
+.hero__link:hover,
+.service__flow-link:hover  {
   color: var(--color-accent);
   border-color: var(--color-accent);
 }

@@ -134,6 +134,7 @@
 		<li class="service__flow-item">確認・修正</li>
 		<li class="service__flow-item">公開</li>
 	</ol>
+	<p class="service__flow-more"><a class="service__flow-link" href="<?php echo esc_url( home_url( '/flow/' ) ); ?>">詳しい制作の流れを見る</a></p>
 	</section>
 
 <!-- ===== CONTACT ===== -->

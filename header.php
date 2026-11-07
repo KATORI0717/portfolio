@@ -52,6 +52,7 @@
 			<li class="header__nav-item"><a class="header__nav-link" href="<?php echo esc_url( home_url( '/#about' )); ?>">ABOUT</a></li>
 			<li class="header__nav-item"><a class="header__nav-link" href="<?php echo esc_url(get_post_type_archive_link( 'works' )); ?>">WORKS</a></li>
 			<li class="header__nav-item"><a class="header__nav-link" href="<?php echo esc_url( home_url( '/#service' )); ?>">SERVICE</a></li>
+			<li class="header__nav-item"><a class="header__nav-link" href="<?php echo esc_url( home_url( '/flow/' ) ); ?>">FLOW</a></li>
 		</ul>
 		<a class="header__contact" href="<?php echo esc_url(home_url('/contact/' )); ?>">CONTACT</a>
 	</nav>
