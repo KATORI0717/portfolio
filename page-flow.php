@@ -206,6 +206,39 @@
         </li>
     </ol>
 
+    <section class="basics" aria-labelledby="basics-title">
+        <p class="basics__badge">はじめての方へ</p>
+        <h2 class="basics__title" id="basics-title">はじめてホームページを作る方へ</h2>
+        <p class="basics__lead">ホームページを公開するには、ホームページのほかに「ドメイン」と「サーバー」が必要です。わたしも自分のサイトを作るまで、よく知りませんでした。<br>家に例えるとこんなイメージです。</p>
+        <ul class="basics__list">
+            <li class="basics__item">
+                <img class="basics__icon" src="<?php echo esc_url( get_theme_file_uri('assets/img/basics/domain.svg' ) ); ?>" alt="" width="40" height="40">
+                <h3 class="basics__term">ドメイン<span class="basics__term-en">Domain</span></h3>
+                <p class="basics__like">= ホームページの住所</p>
+                <p class="basics__text">「katori-works.com」のような、ホームページの住所です。お店やお仕事の名前に合わせて、好きな文字を取ることができます。<br><span class="basics__text-note">※ 既存のものと全く同じものは使用できません。</span></p>
+                <p class="basics__cost">費用の目安：1年に1,500〜3,000円ほど</p>
+            </li>
+            <li class="basics__item">
+                <img class="basics__icon" src="<?php echo esc_url( get_theme_file_uri('assets/img/basics/server.svg' ) ); ?>" alt="" width="40" height="40">
+                <h3 class="basics__term">サーバー<span class="basics__term-en">Server</span></h3>
+                <p class="basics__like">= ホームページを建てる土地</p>
+                <p class="basics__text">ホームページのデータを置いておく場所です。会社から借りて使うので「レンタルサーバー」と呼ばれます。</p>
+                <p class="basics__cost">費用の目安：1か月に1,000円前後</p>
+            </li>
+            <li class="basics__item">
+                <img class="basics__icon" src="<?php echo esc_url( get_theme_file_uri('assets/img/basics/website.svg' ) ); ?>" alt="" width="40" height="40">
+                <h3 class="basics__term">ホームページ<span class="basics__term-en">Website</span></h3>
+                <p class="basics__like">= 土地に建てる家</p>
+                <p class="basics__text">サーバーという土地の上に建てて、ドメインという住所で見つけてもらう家です。この家づくりを、わたしが担当します。</p>
+                <p class="basics__cost">費用：ご相談の内容に合わせてお見積もり</p>
+            </li>
+        </ul>
+        <p class="basics__note">ドメインとサーバーは、お客さまのお名前で契約していただくのがおすすめです。あとで制作する人が変わっても、ホームページをそのまま持ち続けられるからです。どの会社を選ぶか、どう設定するかは、一緒に進めます。</p>
+        <p class="basics__small">※ 金額は目安です。会社やプランによって変わります。</p>
+    </section>
+
+
+
 </div>
 
 <?php get_footer(); ?>
