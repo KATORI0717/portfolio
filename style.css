@@ -535,15 +535,15 @@ margin: 0;
 .service__flow {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(6,minmax(0,1fr));
   counter-reset: flow;
 }
 .service__flow::before {
   content: "";
   position: absolute;
   top: 36px;
-  left: 10%;
-  right: 10%;
+  left: calc(100% / 12);
+  right: calc(100% / 12);
   height: 1px;
   background: #BDB3A7;
 }
