@@ -1088,7 +1088,6 @@ margin: 0;
   letter-spacing: 0.06em;
 }
 .flow-page__lead {
-  max-width: 40em;
   margin: 0;
   font-size: 15px;
   line-height: 2;
@@ -1240,11 +1239,9 @@ margin: 0;
   color: var(--color-muted);
 }
 .flow-detail__text {
-  max-width: 40em;
   margin: 14px 0 0;
 }
 .flow-detail__box {
-  max-width: 40em;
   margin-top: 22px;
   padding: 18px 20px;
   border: 1px solid var(--color-line);
@@ -1278,7 +1275,6 @@ margin: 0;
   background: var(--color-line);
 }
 .flow-detail__qa {
-  max-width: 40em;
   margin-top: 18px;
   border-top: 1px solid var(--color-line);
 }
@@ -1376,7 +1372,6 @@ margin: 0;
   letter-spacing: 0.06em;
 }
 .basics__lead {
-  max-width: 40em;
   margin: 12px 0 0;
   font-size: 15px;
   color: var(--color-muted);
@@ -1423,7 +1418,6 @@ margin: 0;
   color: var(--color-muted);
 }
 .basics__note {
-  max-width: 46em;
   margin: 24px 0 0;
   font-size: 14px;
 }
