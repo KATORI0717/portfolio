@@ -5,6 +5,7 @@ the_post();
 $type = ap_work_type_label(get_the_ID() );
 $role = get_post_meta(get_the_ID(), 'ap_role' , true );
 $client = get_post_meta(get_the_ID(), 'ap_client', true );
+$period = get_post_meta(get_the_ID(), 'ap_period', true);
 $url = get_post_meta(get_the_ID(), 'ap_url', true );
 $back_id = (int) get_post_meta(get_the_ID(), 'ap_back_image', true);
 $gallery = ap_get_gallery(get_the_ID() );
@@ -65,6 +66,12 @@ $gallery = ap_get_gallery(get_the_ID() );
 						<div class="work-detail__info-row">
 							<dt class="work-detail__info-term">担当範囲</dt>
 							<dd class="work-detail__info-desc"><?php echo esc_html( $role ); ?></dd>
+						</div>
+					<?php endif; ?>
+					<?php if ( $period ) : ?>
+						<div class="work-detail__info-row">
+							<dt class="work-detail__info-term">制作期間</dt>
+							<dd class="work-detail__info-desc"><?php echo esc_html( $period ); ?></dd>
 						</div>
 					<?php endif; ?>
 					<?php if ( $url ) : ?>

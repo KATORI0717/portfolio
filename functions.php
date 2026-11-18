@@ -104,12 +104,13 @@ function ap_flush_rewrite() {
 add_action( 'after_switch_theme', 'ap_flush_rewrite' );
 
 /**
- * 制作実績の入力欄（担当範囲・クライアント・URL）
+ * 制作実績の入力欄（担当範囲・クライアント・制作期間・URL）
  */
 function ap_works_fields() {
 	return array(
 		'ap_role'    => '担当範囲（例：デザイン / コーディング）',
 		'ap_client'  => 'クライアント（例：自主制作）',
+		'ap_period'  => '制作期間（例：約2週間）',
 		'ap_url'     => 'サイトURL（あれば）',
 		'ap_label_1' => '1枚目の名前（例：写真ver.／空欄なら「表面」）',
 		'ap_label_2' => '2枚目の名前（例：イラストver.／空欄なら「裏面」）',
