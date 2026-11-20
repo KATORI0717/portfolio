@@ -1900,25 +1900,25 @@ a:focus-visible,button:focus-visible {
   }
   .hero {
     grid-template-columns: 1fr;
-    row-gap: 40px;
+    row-gap: 32px;
     min-height: auto;
-    padding: 0 0 100px;
+    padding: 0 0 80px;
   }
   .hero__image {
-    height: 380px;
+    height: 45svh;
   }
   .hero__img {
-    border-radius: 0 0 120px 0;
+    border-radius: 0 0 100px 0;
   }
   .hero__body {
-    gap: 24px;
+    gap: clamp(20px, 2.5svh, 28px);
     padding: 0 var(--side);
   }
   .hero__en {
-    font-size: 64px;
+    font-size: clamp(52px, 14vw, 64px);
   }
   .hero__catch {
-    font-size: 19px;
+    font-size: clamp(17px, 4.6vw, 19px);
   }
   .hero__lead {
     font-size: 14px;
@@ -2023,8 +2023,8 @@ a:focus-visible,button:focus-visible {
     right: var(--side);
     left: var(--side);
     bottom: 32px;
-    font-size: 52px;
-    white-space: normal;
+    font-size: clamp(32px, 10vw, 44px);
+    white-space: nowrap;
   }
   .contact__card {
     padding: 40px 24px;
@@ -2182,7 +2182,7 @@ a:focus-visible,button:focus-visible {
     transform: scaleY(1);
   }
   .home .hero {
-    min-height: auto;
+    min-height: 100svh;
   }
   .home:not(.is-menu-open) .header__menu-line {
     background: #FFF;
@@ -2192,6 +2192,29 @@ a:focus-visible,button:focus-visible {
   }
   .home .contact__bg-text {
     bottom: 210px;
+  }
+  .is-js .contact::before {
+    clip-path: none;
+    transform: none;
+    transition: none;
+  }
+  .contact.is-visible .contact__en {
+    animation-delay: 0s;
+  }
+  .contact.is-visible .contact__line {
+    animation-delay: 0.3s;
+  }
+  .contact.is-visible .contact__title {
+    animation-delay: 0.4s;
+  }
+  .contact.is-visible .contact__text {
+    animation-delay: 0.5s;
+  }
+  .contact.is-visible .contact__button {
+    animation-delay: 0.6s;
+  }
+  .contact.is-visible .contact__bg-text {
+    animation-delay: 0.3s;
   }
 } 
 @media (max-width: 340px) {
