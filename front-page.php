@@ -148,11 +148,14 @@
 -->
 	<section class="contact" id="contact">
 		<p class="contact__bg-text" aria-hidden="true">Let's work together</p>
-		<div class="contact__card fade-up">
+		<div class="contact__card">
 			<p class="contact__en" aria-hidden="true">Contact</p>
+			<span class="contact__line" aria-hidden="true"></span>
 			<h2 class="contact__title">お問い合わせ</h2>
 			<p class="contact__text">お仕事のご相談・ご依頼は、お気軽にお問い合わせください。</p>
-			<a class="contact__button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">お問い合わせフォームへ</a>
+			<a class="contact__button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">お問い合わせフォームへ
+				<span class="contact__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h15M14 7l5 5-5 5"/></svg></span>
+			</a>
 		</div>
 	</section>
 

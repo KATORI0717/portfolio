@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.documentElement.classList.add('is-js');
 
 document.addEventListener('DOMContentLoaded', function () {
-	var targets = document.querySelectorAll('.fade-up');
+	var targets = document.querySelectorAll('.fade-up, .contact');
 
 	var observer = new IntersectionObserver(function (entries) {
 		entries.forEach(function (entry) {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				observer.unobserve(entry.target);
 			}
 		});
-	}, { rootMargin: '0px 0px -10% 0px' });
+	}, { rootMargin: '0px 0px -25% 0px' });
 
 	targets.forEach(function (target) {
 		observer.observe(target);
