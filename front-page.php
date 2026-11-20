@@ -38,7 +38,7 @@
 <section class="about" id="about">
 	<!-- 飾りの大きな英字：読み上げさせない -->
 	 <p class="about__bg-text" aria-hidden="true">About</p>
-	 <div class="about__text">
+	 <div class="about__text fade-up">
 		<p class="about__label">( ABOUT )</p>
 		<h2  class="about__title">看護師から、<br>WEBデザイナーへ。</h2>
 		<div class="about__body">
@@ -52,7 +52,7 @@
 		</ul>
 	</div>
 
-	<div class="about__images">
+	<div class="about__images fade-up">
 		<img class="about__img about__img--main" src="<?php echo ap_img('profile.jpg'); ?>" alt="プロフィール">
 		<img class="about__img about__img--sub" src="<?php echo ap_img('about-work.jpg'); ?>" alt="ノートパソコンとコーヒー">
 	</div>
@@ -68,7 +68,7 @@
 <section class="works" id="works">
 	<p class="works__bg-text" aria-hidden="true">Works</p>
 
-	<div class="works__head">
+	<div class="works__head fade-up">
 		<p class="works__label"> ( WORKS )</p>
 		<h2 class="works__title">制作実績</h2>
 		<p class="works__lead">医療・美容・子育てのジャンルを中心に、<br>WEBサイトから紙ものまで制作しています。</p>
@@ -102,7 +102,7 @@
 	<!-- 飾りの大きな英字：読み上げさせない -->
 	 <p class="service__bg-text" aria-hidden="true">Service</p>
 
-	 <div class="service__head">
+	 <div class="service__head fade-up">
 		<p class="service__label">( SERVICE )</p>
 		<h2 class="service__title">できること</h2>
 	</div>
@@ -145,7 +145,7 @@
 -->
 	<section class="contact" id="contact">
 		<p class="contact__bg-text" aria-hidden="true">Let's work together</p>
-		<div class="contact__card">
+		<div class="contact__card fade-up">
 			<p class="contact__en" aria-hidden="true">Contact</p>
 			<h2 class="contact__title">お問い合わせ</h2>
 			<p class="contact__text">お仕事のご相談・ご依頼は、お気軽にお問い合わせください。</p>

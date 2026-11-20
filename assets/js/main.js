@@ -19,3 +19,24 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 });
+/**
+ * 画面に入ったら、1回だけ .is-visible を付ける（ふわっと浮き上がる動き）
+ */
+document.documentElement.classList.add('is-js');
+
+document.addEventListener('DOMContentLoaded', function () {
+	var targets = document.querySelectorAll('.fade-up');
+
+	var observer = new IntersectionObserver(function (entries) {
+		entries.forEach(function (entry) {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('is-visible');
+				observer.unobserve(entry.target);
+			}
+		});
+	}, { rootMargin: '0px 0px -10% 0px' });
+
+	targets.forEach(function (target) {
+		observer.observe(target);
+	});
+});

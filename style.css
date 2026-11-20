@@ -16,6 +16,7 @@
   --color-light-sub: #cfc6bb;
   --color-accent-light: #e3b7a6;
   --color-darker: #2e2b29;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* 2,ベース（全体の決まり） */
@@ -1523,7 +1524,16 @@ a:focus-visible,button:focus-visible {
     transform: translateY(0) rotate(45deg);
   }
 }
-.flow-card {
+.is-js .fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
+}
+.is-js .fade-up.is-visible {
+  opacity: 1;
+  transform: none;
+}
+  .flow-card {
   transition: transform 0.4s, box-shadow 0.4s;
 }
 .flow-card__tab {
@@ -1924,6 +1934,11 @@ a:focus-visible,button:focus-visible {
   .flow-card__tab,
   .flow-card::after,
   .flow-detail__question::after {
+    transition: none;
+  }
+  .is-js .fade-up {
+    opacity: 1;
+    transform: none;
     transition: none;
   }
   .flow-card:hover,
