@@ -137,6 +137,13 @@ margin: 0;
   line-height: 1.9;
   letter-spacing: 0.1em;
 }
+.hero__catch-line {
+  display: block;
+  overflow: hidden;
+}
+.hero__catch-inner {
+  display: block;
+}
 .hero__label {
   font-family: var(--font-en);
   font-size: 14px;
@@ -170,7 +177,6 @@ margin: 0;
   position: relative;
   width: 1px;
   height: 60px;
-  background: var(--color-line);
 }
 .hero__scroll-arrow::before {
   content: "";
@@ -1525,6 +1531,20 @@ a:focus-visible,button:focus-visible {
     transform: translateY(0) rotate(45deg);
   }
 }
+.hero__catch-inner {
+  animation: catch-up 1.1s var(--ease-out) 0.3s both;
+}
+.hero__catch-line:nth-child(2) .hero__catch-inner {
+  animation-delay: 0.48s;
+}
+@keyframes catch-up {
+  from {
+    transform: translateY(105%);
+  }
+  to {
+    transform: none;
+  }
+}
 .is-js .fade-up {
   opacity: 0;
   transform: translateY(24px);
@@ -2013,5 +2033,8 @@ a:focus-visible,button:focus-visible {
   .service__flow::after,
   .service__flow-item::before {
     transition: none;
+  }
+  .hero__catch-inner {
+    animation: none;
   }
 }

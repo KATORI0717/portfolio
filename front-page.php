@@ -15,7 +15,10 @@
 	<div class="hero__body">
 		<!-- 飾りの英字：読み上げさせない -->
 		 <p class="hero__en" aria-hidden="true">Design<br>with Care</p>
-		 <p class="hero__catch">看護の視点で、<br>やさしく伝わるデザインを。</p>
+		 <p class="hero__catch">
+			<span class="hero__catch-line"><span class="hero__catch-inner">看護の視点で、</span></span>
+			<span class="hero__catch-line"><span class="hero__catch-inner">やさしく伝わるデザインを。</span></span>
+		</p>
 		 <p class="hero__label">( WEB DESIGNER )</p>
 		 <p class="hero__lead">医療・美容・子育てのジャンルを中心に、<br>使う人の気持ちに寄りそってデザインしています。</p>
 		 <a class="hero__link" href="<?php echo esc_url(get_post_type_archive_link('works')); ?>">制作実績を見る</a>
