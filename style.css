@@ -1533,6 +1533,15 @@ a:focus-visible,button:focus-visible {
   opacity: 1;
   transform: none;
 }
+.service__card.fade-up:nth-child(2) {
+  transition-delay: 0.15s;
+}
+.service__card.fade-up:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.work-card.fade-up:nth-child(even) {
+  transition-delay: 0.15s;
+}
   .flow-card {
   transition: transform 0.4s, box-shadow 0.4s;
 }
@@ -1915,6 +1924,10 @@ a:focus-visible,button:focus-visible {
   }
   .basics__item {
     padding: 20px 18px;
+  }
+  .service__card.fade-up:nth-child(n),
+  .work-card.fade-up:nth-child(n) {
+    transition-delay: 0s;
   }
 } 
 @media (max-width: 340px) {

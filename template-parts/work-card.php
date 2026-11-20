@@ -9,7 +9,7 @@ $client  = get_post_meta( get_the_ID(), 'ap_client', true );
 $back_id = (int) get_post_meta( get_the_ID(), 'ap_back_image', true );
 $gallery = ap_get_gallery( get_the_ID() );
 ?>
-<a class="work-card" href="<?php the_permalink(); ?>">
+<a class="work-card fade-up" href="<?php the_permalink(); ?>">
 	<?php if ( count( $gallery ) >= 3 ) : ?>
 		<?php
 		// すべて横長（サムネイルなど）なら、1枚を大きく・2枚を右に重ねる並べ方にする

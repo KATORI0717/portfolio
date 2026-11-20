@@ -108,17 +108,17 @@
 	</div>
 
 	<div class="service__list">
-		<div class="service__card">
+		<div class="service__card fade-up">
 			<p class="service__card-num" aria-hidden="true">01</p>
 			<h3 class="service__card-title">WEBサイト制作</h3>
 			<p class="service__card-text">WordPressのオリジナルテーマ制作から、既存テーマを使ったサイト制作まで。ご予算や運用に合わせてご提案します。</p>
 		</div>
-		<div class="service__card">
+		<div class="service__card fade-up">
 			<p class="service__card-num" aria-hidden="true">02</p>
 			<h3 class="service__card-title">LP（ランディングページ）制作</h3>
 			<p class="service__card-text">お客さまの不安や疑問に先回りして答える構成で、申し込みにつなげます。</p>
 		</div>
-		<div class="service__card">
+		<div class="service__card fade-up">
 			<p class="service__card-num" aria-hidden="true">03</p>
 			<h3 class="service__card-title">バナー・印刷物</h3>
 			<p class="service__card-text">広告バナーやSNS画像、サムネイル、チラシ・名刺・ショップカードまで。限られたスペースで、目に留まるキャッチと情報を組み立てます。</p>
